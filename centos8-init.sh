@@ -31,8 +31,8 @@ systemctl disable firewalld &>/dev/null
 Stat 0 "Disabling Firewall"
 
 ## Updating System Updates
-echo "Updating System Updates"
-yum update -y &>/dev/null 
+echo "Updating System Updates..."
+ yum update -y &>/dev/null
 Stat $? "Updating System Updates"
 
 echo "Installing Base Packages"

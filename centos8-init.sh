@@ -31,9 +31,9 @@ systemctl disable firewalld &>/dev/null
 Stat 0 "Disabling Firewall"
 
 ## Updating System Updates
-echo "Updating System Updates..."
- yum update -y &>/dev/null
-Stat $? "Updating System Updates"
+# echo "Updating System Updates..."
+#  yum update -y &>/dev/null
+# Stat $? "Updating System Updates"
 
 echo "Installing Base Packages"
 yum install https://packages.endpointdev.com/rhel/8/main/x86_64/endpoint-repo.noarch.rpm -y

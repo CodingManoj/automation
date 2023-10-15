@@ -36,7 +36,7 @@ Stat 0 "Disabling Firewall"
 # Stat $? "Updating System Updates"
 
 echo "Installing Base Packages"
-yum install https://packages.endpointdev.com/rhel/8/main/x86_64/endpoint-repo.noarch.rpm -y
+yum install https://packages.endpointdev.com/rhel/8/main/x86_64/endpoint-repo-8-1.ep8.noarch.rpm -y
 PACK_LIST="wget zip unzip gzip vim make net-tools git $EPEL bind-utils python2-pip jq nc telnet bc sshpass python3"
 info "Installing Base Packages"
 for package in $PACK_LIST ; do 

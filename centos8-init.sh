@@ -31,12 +31,12 @@ systemctl disable firewalld &>/dev/null
 Stat 0 "Disabling Firewall"
 
 ## Updating System Updates
-#info "Updating System Updates"
-#yum update -y #&>/dev/null 
-#Stat $? "Updating System Updates"
+echo "Updating System Updates"
+yum update &>/dev/null 
+Stat $? "Updating System Updates"
 
-## Install Base Packages
-yum install https://packages.endpointdev.com/rhel/8/os/x86_64/endpoint-repo.x86_64.rpm -y
+echo "Installing Base Packages"
+yum install https://packages.endpointdev.com/rhel/8/main/x86_64/endpoint-repo.noarch.rpm -y
 PACK_LIST="wget zip unzip gzip vim make net-tools git $EPEL bind-utils python2-pip jq nc telnet bc sshpass python3"
 info "Installing Base Packages"
 for package in $PACK_LIST ; do 
@@ -159,3 +159,4 @@ curl -s https://gitlab.com/thecloudcareers/opensource/-/raw/master/lab-ami-cento
 chown centos:centos /home/centos/.gitconfig; chmod 644 /home/centos/.gitconfig
 
 echo "System is going to shutdown now.. Make a note of the above passwords and save them to use with all your servers .."
+
